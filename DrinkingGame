@@ -2,3 +2,5 @@
 #purpose: To get people drunk
 
 import pygame, mycolors, random
+
+Numberofplayers = int(input("Enter the number of players: ")
