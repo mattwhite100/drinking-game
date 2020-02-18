@@ -3,4 +3,4 @@
 
 import pygame, mycolors, random
 
-Numberofplayers = int(input("Enter the number of players: ")
+numberOfPlayers = int(input("Enter the number of players: ")
