@@ -1,1 +1,10 @@
+numberofplayers = int(input("Enter the number of players: "))
+count = 0
 
+playerlist = [numberofplayers]
+
+for count in playerlist: 
+    if count <= numberofplayers:
+        playername = ""
+        playername(count) = str(input("Enter player", count, " name: "))
+        count += 1
