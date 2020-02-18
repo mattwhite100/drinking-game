@@ -2,9 +2,7 @@
 #purpose: To get people drunk
 
 import pygame, mycolors, random
-
-numberOfPlayers = int(input("Enter the number of players: ")
-
+# this is to make the display screen
 def write_text(surface, text, fon, size, color, x, y):
     font = pygame.font.SysFont(fon, size)
     txt = font.render(text, True, color)
@@ -45,3 +43,5 @@ while wholegame:
                 wholegame = False
         start_screen()
         pygame.display.update
+        
+        numberOfPlayers = int(input("Enter the number of players: ")
