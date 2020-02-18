@@ -4,3 +4,44 @@
 import pygame, mycolors, random
 
 numberOfPlayers = int(input("Enter the number of players: ")
+
+def write_text(surface, text, fon, size, color, x, y):
+    font = pygame.font.SysFont(fon, size)
+    txt = font.render(text, True, color)
+    surface.blit(txt, (x, y))
+    pygame.display.update()
+def playb():
+    pygame.draw.rect(win, mycolors.green, (win_w - 1000, win_h - 350, 350, 170))
+    write_text(win, "PLAY", 'arial', 100, mycolors.black, win_w - 985, win_h - 330)
+def quitb():
+    pygame.draw.rect(win, mycolors.red, (win_w - 575, win_h - 350, 350, 170))
+    write_text(win, "QUIT", 'arial', 100, mycolors.black, win_w - 550, win_h - 330)
+def start_screen():
+    playb()
+    quitb()
+    write_text(win,"Drinking Game", 'arial', 150, mycolors.blue, win_w // 2 - 400, win_h // 2 - 200)
+win = pygame.display.set_mode((1250,700))
+win_w = win.get_width()
+win_h = win.get_height()
+win.fill(mycolors.white)
+pygame.display.set_caption("Drinking Game")
+pygame.init()
+pygame.display.update()
+
+playbutton = pygame.draw.rect(win, mycolors.green, (win_w - 1000, win_h - 350, 350, 170))
+quitbutton = pygame.draw.rect(win, mycolors.red, (win_w - 575, win_h - 350, 350, 170))
+
+start = True
+wholegame = True 
+
+while wholegame: 
+    for event in pygame.event.get(): 
+        if event.type == pygame.QUIT: 
+            wholegame = False 
+    while start:
+        for event in pygame.event.get(): 
+            if event.type == pygame.QUIT: 
+                start = False 
+                wholegame = False
+        start_screen()
+        pygame.display.update
