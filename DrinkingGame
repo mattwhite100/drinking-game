@@ -44,4 +44,5 @@ while wholegame:
         start_screen()
         pygame.display.update
         
-        numberOfPlayers = int(input("Enter the number of players: ")
+        
+        
